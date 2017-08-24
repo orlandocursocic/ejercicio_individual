@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace ejercicio_individual.Models
+namespace ejercicio_individual
 {
     // Modelos usados como parámetros para las acciones de AccountController.
 

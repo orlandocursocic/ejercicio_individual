@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ejercicio_individual.Models
+namespace ejercicio_individual
 {
     // Modelos devueltos por las acciones de AccountController.
 

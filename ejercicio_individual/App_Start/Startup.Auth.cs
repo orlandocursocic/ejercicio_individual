@@ -9,7 +9,7 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using ejercicio_individual.Providers;
-using ejercicio_individual.Models;
+using ejercicio_individual;
 
 namespace ejercicio_individual
 {

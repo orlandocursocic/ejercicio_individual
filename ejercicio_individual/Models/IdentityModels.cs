@@ -3,8 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
+using System;
 
-namespace ejercicio_individual.Models
+namespace ejercicio_individual
 {
     // Para agregar datos de perfil al usuario, agregue más propiedades a la clase ApplicationUser. Para obtener más información, visite http://go.microsoft.com/fwlink/?LinkID=317594.
     public class ApplicationUser : IdentityUser
@@ -20,6 +22,9 @@ namespace ejercicio_individual.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        [ThreadStatic]
+        public static ApplicationDbContext applicationDbContext;
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -29,5 +34,8 @@ namespace ejercicio_individual.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Entrada> Entradas { get; set; }
+        public DbSet<Pelicula> Peliculas { get; set; }
     }
 }

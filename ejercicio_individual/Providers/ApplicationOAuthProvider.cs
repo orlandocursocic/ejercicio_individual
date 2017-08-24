@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using ejercicio_individual.Models;
+using ejercicio_individual;
 
 namespace ejercicio_individual.Providers
 {
