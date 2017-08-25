@@ -10,9 +10,12 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using ejercicio_individual;
 using ejercicio_individual.Services;
+using System.Web.Http.Cors;
 
 namespace ejercicio_individual.Controllers
 {
+    [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
+
     public class EntradasController : ApiController
     {
         private IEntradaService entradasService;

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Cors;
 
 namespace ejercicio_individual.Repositories
 {
     public class EntradaRepository : IEntradaRepository
     {
+        [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
+
         public Entrada Create(Entrada entrada)
         {
             return ApplicationDbContext.applicationDbContext.Entradas.Add(entrada);
